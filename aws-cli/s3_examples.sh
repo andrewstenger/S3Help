@@ -13,3 +13,6 @@ aws s3 sync s3://${BUCKET}/${PREFIX} ${LOCAL_DIR}
 
 # it works in both directions too, you can also upload with it, just change the order of the data-sources
 aws s3 sync ${LOCAL_DIR} s3://${BUCKET}/${PREFIX} --dryrun
+
+# this lists the files in the bucket at the prefix, recursively
+aws s3 ls s3://${BUCKET}/${PREFIX} --recursive
