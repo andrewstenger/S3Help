@@ -22,4 +22,4 @@ for root, dirs, files in os.walk(local_path):
 
 # you can pull CSVs directly off S3 with Pandas, using the complete S3 URI for the object as the path (URI is in the form "s3://<bucket>/<key>")
 key = 'path/to/spreadsheet.csv'
-df = pd.read_csv(f's3://{bucket_name}/{key}', index=False)
+df = pd.read_csv(f's3://{bucket_name}/{key}')
